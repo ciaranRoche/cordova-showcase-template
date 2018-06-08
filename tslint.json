@@ -26,6 +26,17 @@
     "max-classes-per-file": [
       false
     ],
+    "max-line-length": [
+      false
+    ],
+    "no-console": [
+      false
+    ],
+    "no-var-requires": false,
+    "member-ordering": false,
+    "no-shadowed-variable": false,
+    "prefer-for-of": false,
+    "no-unused-expression": false,
     "variable-name": [
       true,
       "ban-keywords",

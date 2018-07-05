@@ -2,6 +2,7 @@ import { Auth } from "@aerogear/auth";
 import { Component } from "@angular/core";
 import { NavController, Platform } from "ionic-angular";
 import { authProvider } from "../../services/auth.service";
+import { CertificateCheckerService } from "../../services/cert-checker.service";
 import { DocumentationService } from "../../services/documentation.service";
 import { PushService } from "../../services/push.service";
 import { PushMessage } from "../pushMessages/message";
@@ -18,7 +19,9 @@ export class HomePage {
     push: PushService,
     plt: Platform,
     public auth: Auth,
-    public docService: DocumentationService) {
+    public docService: DocumentationService,
+    public certChecker: CertificateCheckerService) {
+    certChecker.sslHandshakeCheck();
     // We need to wait for the platform to initialize the plugins
     plt.ready().then(() => {
       push.initPush();

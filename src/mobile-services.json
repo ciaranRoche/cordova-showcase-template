@@ -1,10 +1,7 @@
 {
   "version": 1,
-  "clusterName": "192.168.64.74:8443",
+  "clusterName": "https://10.32.240.181:8443",
   "namespace": "myproject",
-  "clientId": "example_client_id",
-  "services": [
-  ]
+  "clientId": "myapp-cordova",
+  "services": []
 }
-
-

@@ -3,6 +3,7 @@ import { ErrorHandler, Injector, NgModule } from "@angular/core";
 import { HttpModule } from "@angular/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { Dialogs } from "@ionic-native/dialogs";
+import { HTTP } from "@ionic-native/http";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
 import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
@@ -30,6 +31,7 @@ import { ConstructionPage } from "../pages/underConstruction/construction";
 
 import { SecureStorage } from "@ionic-native/secure-storage";
 import { authProvider } from "../services/auth.service";
+import { CertificateCheckerService } from "../services/cert-checker.service";
 import { DocumentationService } from "../services/documentation.service";
 import { PushService } from "../services/push.service";
 import { SimpleToastService } from "../services/toast.service";
@@ -84,6 +86,7 @@ import { SimpleToastService } from "../services/toast.service";
   ],
   providers: [
     StatusBar,
+    HTTP,
     SplashScreen,
     authProvider,
     SimpleToastService,
@@ -93,6 +96,7 @@ import { SimpleToastService } from "../services/toast.service";
     PushRegistration,
     Dialogs,
     DocumentationService,
+    CertificateCheckerService,
   ],
 })
 export class AppModule {
